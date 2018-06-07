@@ -103,7 +103,7 @@
             <div class="flip-container">
               <div class="flipper">
                 <div class="front">
-                  <img src="Sanji.jpg">
+                  <img src="Sanji.JPG">
                 </div>
                 <div class="back" style=background-image:url('bg.jpg')>
                   <h4 style="color:blue;">VINSMOKE SANJI</h4>
