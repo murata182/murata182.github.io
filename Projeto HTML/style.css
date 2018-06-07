@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  background-color: lightblue;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+header {
+  background: #329cff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  width: 100%;
+  max-height: 70px;
+}
+
+.gif{
+  border-radius: 50%;
+  }
+
+header .menu {
+  margin-right: 10px;
+}
+
+header .menu ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+header .menu ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header .menu ul li a:hover {
+  color: #d4d4d4;
+}
+
+main {
+  margin-top: 70px;
+}
+
+#home .slide {
+  display: flex;
+}
+
+#home .slide li {
+  width: 100%;
+}
+
+#home .slide li img {
+  width: 100%;
+}
+
+
+#membros ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#membros ul li {
+  padding: 0 10px;
+  margin-bottom: 15px;
+}
+
+#membros ul li img {
+  width: 100%;
+}
+
+/******************************** CARD FLIP ********************************/
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	width: 320px;
+	height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+  left: 0;
+  background: #d4d4d4;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
